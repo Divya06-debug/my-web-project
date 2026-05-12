@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WanderWise – Travel Tips</title>
+  <style>
+    :root {
+      --primary: #2d6cdf;
+      --accent: #f4b400;
+      --bg: #f7f9fc;
+      --text: #1f2937;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--primary), #4f8cff);
+      color: white;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(45,108,223,0.1);
+      color: var(--primary);
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tips-list li {
+      margin-bottom: 0.6rem;
+    }
+
+    .newsletter {
+      background: linear-gradient(120deg, #ffffff, #eef3ff);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .newsletter input {
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      min-width: 220px;
+      margin-right: 0.5rem;
+    }
+
+    .newsletter button {
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>WanderWise</h1>
+    <p>Smart, simple travel tips from people who love exploring 🌍</p>
+  </header>
+
+  <nav>
+    <a href="#destinations">Destinations</a>
+    <a href="#budget">Budget Travel</a>
+    <a href="#packing">Packing</a>
+    <a href="#safety">Safety</a>
+  </nav>
+
+  <main>
+    <section id="destinations">
+      <h2>Destination Tips</h2>
+      <div class="card-grid">
+        <div class="card">
+          <span class="tag">Europe</span>
+          <h3>Paris Like a Local</h3>
+          <p>Skip tourist cafés near landmarks. Walk a few blocks and eat where locals do—better food, better prices.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Asia</span>
+          <h3>Tokyo Transport</h3>
+          <p>Get a prepaid IC card (Suica or Pasmo). It works on trains, buses, and even vending machines.</p>
+        </div>
+        <div class="card">
+          <span class="tag">Americas</span>
+          <h3>National Parks</h3>
+          <p>Arrive early or late in the day to avoid crowds and catch the best light for photos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="budget">
+      <h2>Budget Travel</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Flights</h3>
+          <ul class="tips-list">
+            <li>Be flexible with dates.</li>
+            <li>Check nearby airports.</li>
+            <li>Book flights mid-week.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Accommodation</h3>
+          <ul class="tips-list">
+            <li>Look for guesthouses and hostels.</li>
+            <li>Stay slightly outside city centers.</li>
+            <li>Read recent reviews carefully.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="packing">
+      <h2>Packing Smart</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Carry-On Only</h3>
+          <p>Choose versatile clothing and pack layers. Rolling clothes saves space.</p>
+        </div>
+        <div class="card">
+          <h3>Essentials</h3>
+          <p>Power adapter, reusable water bottle, copies of documents, and a small first-aid kit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety">
+      <h2>Travel Safety</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Stay Aware</h3>
+          <p>Keep valuables secure and be mindful in crowded areas.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Safety</h3>
+          <p>Use secure Wi‑Fi, back up photos, and share itineraries with someone you trust.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>Get New Tips</h2>
+      <p>Join the WanderWise newsletter for fresh travel advice.</p>
+      <input type="email" placeholder="your@email.com" />
+      <button onclick="subscribe()">Subscribe</button>
+      <p id="message"></p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 WanderWise · Travel smarter, wander farther
+  </footer>
+
+  <script>
+    function subscribe() {
+      const message = document.getElementById('message');
+      message.textContent = 'Thanks for subscribing! ✈️';
+      message.style.color = '#2d6cdf';
+    }
+  </script>
+
+</body>
+</html>
